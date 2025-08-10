@@ -1,11 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-* {
+/* variables */
+:root {
+  --background-secondary: #CDD1D4;
+  --background-lighter: #F1ECE6;
+  --button-white: white;
+  --text: #2B2B2B;
+  --text-navigation: #1F06AC;
+  --primary: #1F06AC;
+}
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .container {
