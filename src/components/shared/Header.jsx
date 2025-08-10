@@ -1,61 +1,68 @@
 import './Header.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const navItems = ['Portfolio', 'Info'];
 
   return (
     <>
       <header className="header">
         <div className="header-container">
-          <a href="./" className="logo">
+          <Link to="/" className="logo" onClick={() => setMenuOpen(false)}>
             HAN FRISONSOVA
-          </a>
+          </Link>
 
           <nav className="nav-desktop">
-            {navItems.map((item) => (
-              <a key={item} href={`${item.toLowerCase()}`} className="nav-link">
-                {item}
-              </a>
-            ))}
+            <Link
+              to="/portfolio"
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              Portfolio
+            </Link>
+            <Link
+              to="/info"
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              Info
+            </Link>
           </nav>
-
-          <button
-            className="hamburger"
-            onClick={() => setMenuOpen(true)}
-            aria-label="Open menu"
-          >
-            &#9776;
-          </button>
         </div>
       </header>
+
+      <button
+        className={`toggle-btn ${menuOpen ? 'open' : ''}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+      >
+        <span />
+        <span />
+      </button>
 
       {menuOpen && (
         <div className="fullscreen-menu">
           <div className="fullscreen-header">
-            <a href="./" className="logo" onClick={() => setMenuOpen(false)}>
+            <Link to="/" className="logo" onClick={() => setMenuOpen(false)}>
               HAN FRISONSOVA
-            </a>
-            <button
-              className="close-btn"
-              onClick={() => setMenuOpen(false)}
-              aria-label="Close menu"
-            >
-              &times;
-            </button>
+            </Link>
           </div>
           <nav className="nav-mobile">
-            {navItems.map((item) => (
-              <a
-                key={item}
-                href={`${item.toLowerCase()}`}
-                className="nav-link-mobile"
-                onClick={() => setMenuOpen(false)}
-              >
-                {item}
-              </a>
-            ))}
+            <Link
+              to="/portfolio"
+              className="nav-link-mobile"
+              onClick={() => setMenuOpen(false)}
+            >
+              Portfolio
+            </Link>
+            <Link
+              to="/info"
+              className="nav-link-mobile"
+              onClick={() => setMenuOpen(false)}
+            >
+              Info
+            </Link>
           </nav>
         </div>
       )}
