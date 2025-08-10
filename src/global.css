@@ -18,6 +18,7 @@
 html {
   font-family: "Work Sans", sans-serif;
   scroll-behavior: smooth;
+   background-color: var(--background-sec);
 }
 
 .container {
@@ -25,6 +26,7 @@ html {
   padding-inline: 1rem;
   margin-right: auto;
   margin-left: auto;
+ 
 }
 
 p {

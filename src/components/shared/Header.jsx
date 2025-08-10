@@ -1,9 +1,20 @@
 import './Header.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Při změně velikosti okna zavřeme menu, pokud jsme na desktopu
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768 && menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [menuOpen]);
 
   return (
     <>
@@ -14,18 +25,10 @@ export const Header = () => {
           </Link>
 
           <nav className="nav-desktop">
-            <Link
-              to="/portfolio"
-              className="nav-link"
-              onClick={() => setMenuOpen(false)}
-            >
+            <Link to="/portfolio" className="nav-link" onClick={() => setMenuOpen(false)}>
               Portfolio
             </Link>
-            <Link
-              to="/info"
-              className="nav-link"
-              onClick={() => setMenuOpen(false)}
-            >
+            <Link to="/info" className="nav-link" onClick={() => setMenuOpen(false)}>
               Info
             </Link>
           </nav>
@@ -49,18 +52,10 @@ export const Header = () => {
             </Link>
           </div>
           <nav className="nav-mobile">
-            <Link
-              to="/portfolio"
-              className="nav-link-mobile"
-              onClick={() => setMenuOpen(false)}
-            >
+            <Link to="/portfolio" className="nav-link-mobile" onClick={() => setMenuOpen(false)}>
               Portfolio
             </Link>
-            <Link
-              to="/info"
-              className="nav-link-mobile"
-              onClick={() => setMenuOpen(false)}
-            >
+            <Link to="/info" className="nav-link-mobile" onClick={() => setMenuOpen(false)}>
               Info
             </Link>
           </nav>
