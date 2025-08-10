@@ -6,7 +6,7 @@
   --text: #2B2B2B;
   --reflex: #1F06AC;
   /* hlavní pozadí Lightboxu */
-  --yarl__container_background_color: rgba(200, 200, 200, 0.84);
+  --yarl__container_background_color: rgba(200, 200, 200, 0.9);
 }
 
 *,
@@ -104,6 +104,19 @@ h6 {
 
 .yarl__navigation_prev {
   padding: var(--yarl__navigation_button_padding, 40% 45% 40% 20px) !important;
+}
+
+.yal__close-button,
+.yarl__toolbar {
+  position: relative;
+  /* pokud už nemá */
+  z-index: 1000;
+  /* dostatečně vysoké číslo */
+}
+
+.yarl__button {
+  color: var(--yarl__color_button, hsl(0, 0%, 20%)) !important;
+  filter: var(--yarl__button_filter, drop-shadow(0 0 0 rgba(0, 0, 0, 0))) !important;
 }
 
 /*
