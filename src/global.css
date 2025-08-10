@@ -5,6 +5,8 @@
   --background-sec: #959595;
   --text: #2B2B2B;
   --reflex: #1F06AC;
+  /* hlavní pozadí Lightboxu */
+  --yarl__container_background_color: rgba(200, 200, 200, 0.84);
 }
 
 *,
@@ -18,7 +20,7 @@
 html {
   font-family: "Work Sans", sans-serif;
   scroll-behavior: smooth;
-   background-color: var(--background-sec);
+  background-color: var(--background-sec);
 }
 
 .container {
@@ -26,7 +28,7 @@ html {
   padding-inline: 1rem;
   margin-right: auto;
   margin-left: auto;
- 
+
 }
 
 p {
@@ -86,10 +88,29 @@ h6 {
 }
 */
 
+/* Změní pozadí celé lightbox vrstvy */
+.yar-lightbox__container {
+  background-color: rgba(135, 118, 118, 0.9) !important;
+  /* tmavě šedá s průhledností */
+}
+
+.yarl__container {
+  background-color: var(--yarl__container_background_color, var(--yarl__color_backdrop, #968787));
+}
+
+.yarl__navigation_next {
+  padding: var(--yarl__navigation_button_padding, 40% 20px 40% 45%) !important;
+}
+
+.yarl__navigation_prev {
+  padding: var(--yarl__navigation_button_padding, 40% 45% 40% 20px) !important;
+}
+
+/*
 @media (min-width: 768px) {
   .container {
-    padding-inline: 0;
-    max-width: 40rem;
+  
   }
 
 }
+*/

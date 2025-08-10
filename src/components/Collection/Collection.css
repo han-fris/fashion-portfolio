@@ -1,12 +1,12 @@
 .masonry-grid {
   display: flex;
-  margin-left: -20px;
+  margin-left: -30px;
   /* mezera mezi sloupci */
   width: auto;
 }
 
 .masonry-grid_column {
-  padding-left: 20px;
+  padding-left: 30px;
   /* mezera mezi sloupci */
   background-clip: padding-box;
 }
@@ -14,7 +14,7 @@
 .masonry-grid_column img {
   width: 100%;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
