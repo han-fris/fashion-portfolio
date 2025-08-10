@@ -1,8 +1,7 @@
-
 export const Footer = () => {
   return (
     <footer>
-      <h2>patička</h2>
+      <h2>fashion portfolio</h2>
     </footer>
   );
 };

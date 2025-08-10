@@ -5,7 +5,7 @@ export const HomePage = () => {
   return (
     <PageWrapper>
       <div className="container">
-        <h1>Ahoj světe</h1>
+        <h2>Ahoj světe</h2>
       </div>
     </PageWrapper>
   );

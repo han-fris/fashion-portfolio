@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 /* variables */
+/*
 :root {
   --background-secondary: #CDD1D4;
   --background-lighter: #F1ECE6;
@@ -9,7 +9,7 @@
   --text-navigation: #1F06AC;
   --primary: #1F06AC;
 }
-
+*/
 *,
 *:before,
 *:after {
@@ -19,7 +19,7 @@
 }
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -28,3 +28,60 @@ html {
   margin-right: auto;
   margin-left: auto;
 }
+
+p {
+    font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+   letter-spacing: 0.05em;
+}
+
+/* UBUNTU FONT
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+*/
+
+/* WORK SANS FONT
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+.work-sans-<uniquifier> {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/

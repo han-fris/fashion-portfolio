@@ -1,7 +1,9 @@
+import './Header.css';
+
 export const Header = () => {
   return (
     <header>
-      <h2>PORTFOLIO</h2>
+      <h1 className="logo">HANA FRISONSOVA</h1>
     </header>
   );
 };
