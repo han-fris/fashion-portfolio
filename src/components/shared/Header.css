@@ -51,12 +51,15 @@
 /* Hamburger menu - skryté na desktop */
 .hamburger {
   font-size: 2rem;
+    line-height: 1;
+  padding: 0;
   background: none;
   border: none;
   cursor: pointer;
+  color: var(--text);
+  height: 3rem;
   display: none;
-  line-height: 1;
-  padding: 0;
+
 }
 
 /* Fullscreen menu - přes celou obrazovku */
@@ -78,9 +81,8 @@
   right: 0;
   padding: 1rem 1.5rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  height: 56px;
   box-sizing: border-box;
   background: transparent;
 }
@@ -140,6 +142,8 @@
   }
 
   .hamburger {
-    display: block;
+      display: flex;
+  align-items: center;
+  justify-content: center;
   }
 }

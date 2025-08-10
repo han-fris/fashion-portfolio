@@ -10,7 +10,7 @@ export const Header = () => {
       <header className="header">
         <div className="header-container">
           <a href="./" className="logo">
-            HANA FRISONSOVA
+            HAN FRISONSOVA
           </a>
 
           <nav className="nav-desktop">
@@ -35,7 +35,7 @@ export const Header = () => {
         <div className="fullscreen-menu">
           <div className="fullscreen-header">
             <a href="./" className="logo" onClick={() => setMenuOpen(false)}>
-              HANA FRISONSOVA
+              HAN FRISONSOVA
             </a>
             <button
               className="close-btn"
