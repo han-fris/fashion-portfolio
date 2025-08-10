@@ -1,15 +1,13 @@
 
 /* variables */
-/*
+
 :root {
-  --background-secondary: #CDD1D4;
-  --background-lighter: #F1ECE6;
-  --button-white: white;
+  --background-pri: #CDD1D4;
+  --background-sec: #959595;
   --text: #2B2B2B;
-  --text-navigation: #1F06AC;
-  --primary: #1F06AC;
+  --reflex: #1F06AC;
 }
-*/
+
 *,
 *:before,
 *:after {
@@ -24,6 +22,7 @@ html {
 }
 
 .container {
+  padding-top: 60px;  
   max-width: 26rem;
   margin-right: auto;
   margin-left: auto;

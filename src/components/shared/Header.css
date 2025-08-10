@@ -1,6 +1,145 @@
+.header {
+  background: var(--background-sec);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .logo {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0.1em;
+  font-size: 1.8rem;
+  color: var(--text);
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Desktop menu */
+.nav-desktop {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 400;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.logo:hover {
+  color: var(--reflex);
+}
+
+/* Hamburger menu - skryté na desktop */
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  line-height: 1;
+  padding: 0;
+}
+
+/* Fullscreen menu - přes celou obrazovku */
+.fullscreen-menu {
+  position: fixed;
+  inset: 0;
+  background: var(--background-sec);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.fullscreen-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 56px;
+  box-sizing: border-box;
+  background: transparent;
+}
+  
+
+/* Zavírací tlačítko */
+.close-btn {
+  font-size: 3rem;
+  line-height: 1;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobilní menu - položky pod sebou uprostřed */
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: color 0.3s;
+}
+
+.nav-link-mobile {
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 400;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+.nav-link-mobile:hover,
+.logo:hover {
+  color: var(--reflex);
+}
+
+/* Responsivita - do šířky 768px (tablet, mobil) */
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
