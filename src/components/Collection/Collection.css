@@ -1,0 +1,36 @@
+.masonry-grid {
+  display: flex;
+  margin-left: -20px;
+  /* mezera mezi sloupci */
+  width: auto;
+}
+
+.masonry-grid_column {
+  padding-left: 20px;
+  /* mezera mezi sloupci */
+  background-clip: padding-box;
+}
+
+.masonry-grid_column img {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.masonry-grid_column img:hover {
+  transform: scale(1.03);
+}
+
+/* Lazy-load efekt */
+.lazy-image {
+  filter: blur(10px);
+  opacity: 0.6;
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
+.lazy-image.loaded {
+  filter: blur(0);
+  opacity: 1;
+}
